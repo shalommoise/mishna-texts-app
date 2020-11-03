@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.MainHeading {
+  text-align: right;
+
+  font-weight: bolder;
+  text-decoration: underline;
+}
+.MishnaText {
+  direction: rtl;
+  text-align: right;
+  margin-right: 200px;
+  margin-left: 200px;
+  font: helvetica;
+}
