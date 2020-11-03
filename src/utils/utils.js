@@ -46,5 +46,24 @@ const arr = digits.toString().split(".")
 
   return `${convert(arr[0])}:${convert(arr[1])}`
 }
+const mishnaSubHeading =(digits) =>{
+if(!digits) return ''
+const arr = digits.toString().split(".")
 
-module.exports = {convert, mishnaNumbers, getNumbers}
+  return `${convert(arr[0])} פרק - משנה ${convert(arr[1])}`
+
+}
+
+const getChapter =(num)=>{
+  if(!num) return '';
+  return Math.floor(num);
+};
+
+ const getVerse =(num)=>{
+    if(!num) return '';
+const str = num.toString();
+ const arr = str.split(".");
+ return Number(arr[1]);
+}
+
+module.exports = {convert, mishnaNumbers, getNumbers, mishnaSubHeading, getVerse, getChapter}

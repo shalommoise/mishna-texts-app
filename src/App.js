@@ -1,25 +1,32 @@
 import React, { Component } from "react";
-
-import { Router } from "@reach/router";
+import {Router} from '@reach/router'
+import Form from "./components/Form"
+import Mishna from "./components/Mishna"
 // import {ejs} from "ejs";
 // import {fs} from "fs";
 // import {pdf} from "html-pdf"
+
 import "./App.css";
 
 class App extends Component {
-  state = {};
+  state = { 
+    name:'',end:'',masechta:''
+  };
 
-  formFunc = (dataFromForm) => {
-    this.setState({ mishnaInfo: dataFromForm });
+  formFunc = (name, value) => {
+    this.setState({ [name]:value });
   };
   render() {
+    const {start ,end, masechta} = this.state
     return (
+      
       <div className="App">
-        
-        {/* <Router>
-          <Form path="/" formFilled={this.formFunc} />
-          <MainPage path="mishna" mishnaInfo={this.state.mishnaInfo} />
-        </Router> */}
+     
+        <Router>
+ <Mishna path="mishna/:masechta/start/:start/end/:end"/> 
+  <Form path="/" formFunc={this.formFunc} masechta={masechta} start={start} end={end}/> 
+   </Router>
+
       </div>
     );
   }
