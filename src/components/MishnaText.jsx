@@ -5,19 +5,28 @@ class MishnaText extends Component {
     
 componentDidMount =()=>{
    const  {number, masechta} = this.props;
-api.getMishnaText(masechta, getChapter(number)).then((data)=>this.setState({text: data[getVerse(number)-1].split(":")[0]}))
+
+   if(Math.floor(number) === number) this.setState(({err: true}));
+   else
+api.getMishnaText(masechta, getChapter(number)).then((data)=>{
+const mishna = data[getVerse(number)-1]
+if(!data || !mishna) this.setState(({err: true}))
+ else this.setState({text: mishna.split(":")[0], isLoading: false})
+})
    
 }
 
   state={
-    text: ''
+    text: '',
+    err: false ,
+    isLoading: true
   }
   render() {
-
+const {text, err, isLoading} = this.state
 
     return (
       <div>
-        {this.state.text}
+       {err ? <p>This Mishna does not exist</p> : isLoading ? <p>Loading...</p> :<p> {text}</p> } 
       </div>
     );
   }

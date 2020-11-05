@@ -6,14 +6,15 @@ const Form = (props) => {
 const changeForm =(event)=>{
   const {name, value} =event.target;
 
-props.formFunc(name,value)
+props.formFunc(name,value);
+
 }
 const shortname =(name)=>{
 const arr = name.split(" ");
 arr.shift();
 return arr.join(' ')
  }
-  const {start ,end, masechta} = props
+  const {start ,end, masechta, err} = props
     return (
       
       <div className="formPage">
@@ -34,12 +35,13 @@ return  <option key={masechtaName} value={masechtaName}>{shortname(masechtaName)
 
 </select>
          <label htmlFor="start">Starts:</label>
-<input key='start'  name='start'  type="text" onChange={changeForm}/>  
+<input key='start'  name='start'  type="number" onChange={changeForm}/>  
        <label htmlFor="ends">Ends:</label>
-<input key='ends'  name='end'  type="text" onChange={changeForm}/>  
-    <Link to={`/mishna/${masechta}/start/${start}/end/${end}`} className="button">Generate Mishna</Link> <br/> 
+<input key='ends'  name='end'  type="number" onChange={changeForm}/>  
+
   
         </form>
+        {err ? <p>Start mishna must be before the end mishna </p>:     <Link  to={`/mishna/${masechta}/start/${start}/end/${end}`}  className="button">Generate Mishna</Link> }
       </div>
     );
 

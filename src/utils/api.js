@@ -6,5 +6,5 @@ export const getMishnaText = (name, number) => {
     .get(`https://www.sefaria.org/api/texts/${name}.${number}`)
     .then((mishna) => {
       return mishna.data.he;
-    });
+    }).catch((err)=>console.log(err))
 };
