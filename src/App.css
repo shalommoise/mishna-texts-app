@@ -6,14 +6,16 @@
   max-width: 900px;
 }
 .mishna {
-  margin-right: 1.32cm;
+  margin-right: 5cm;
   margin-left: 1.9cm;
   margin-bottom: 40px;
   text-align: right;
 }
-
+.t4mLogo {
+  margin-right: 5cm;
+}
 h2 {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   font-size: large;
 }
 h1 {
@@ -23,7 +25,13 @@ h1 {
   font-size: 40px;
 }
 .heading {
+  margin-right: 4cm;
   display: flex;
+  justify-content: space-evenly;
+}
+.JFTlogo {
+  /* padding-right: 8cm; */
+  /* margin-right: 5cm; */
 }
 .formPage {
   display: grid;
@@ -34,9 +42,14 @@ h1 {
   flex-direction: column;
 }
 .button {
-  padding: 20px;
+  margin-top: 20px;
+  width: 60px;
+  padding: 10px;
   margin-left: 10px;
   background-color: antiquewhite;
   border-radius: 20px;
   text-decoration: none;
+}
+#genbutton {
+  margin-left: 400px;
 }

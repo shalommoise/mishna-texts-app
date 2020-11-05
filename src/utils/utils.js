@@ -50,7 +50,7 @@ const mishnaSubHeading =(digits) =>{
 if(!digits) return ''
 const arr = digits.toString().split(".")
 
-  return `${convert(arr[0])} פרק - משנה ${convert(arr[1])}`
+  return ` ${convert(arr[0])}  פרק  -  משנה  ${convert(arr[1])} `
 
 }
 

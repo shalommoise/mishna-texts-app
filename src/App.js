@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Router} from '@reach/router'
 import Form from "./components/Form"
 import Mishna from "./components/Mishna"
+
 // import {ejs} from "ejs";
 // import {fs} from "fs";
 // import {pdf} from "html-pdf"
@@ -40,13 +41,14 @@ this.checkNumbers(end) ? this.setState({err: false}) : this.setState({err: true}
     return (
       
       <div className="App">
+   
      
         <Router>
  <Mishna path="mishna/:masechta/start/:start/end/:end"/> 
   <Form path="/" formFunc={this.formFunc}  masechta={masechta} start={start} end={end} err={err}/> 
    </Router>
-
-      </div>
+</div>
+      
     );
   }
 }

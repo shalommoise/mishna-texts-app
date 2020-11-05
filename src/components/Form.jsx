@@ -41,7 +41,7 @@ return  <option key={masechtaName} value={masechtaName}>{shortname(masechtaName)
 
   
         </form>
-        {err ? <p>Start mishna must be before the end mishna </p>:     <Link  to={`/mishna/${masechta}/start/${start}/end/${end}`}  className="button">Generate Mishna</Link> }
+        {err ? <p>Start mishna must be before the end mishna </p>:     <Link  to={`/mishna/${masechta}/start/${start}/end/${end}`}  className="button" id="genbutton">Generate Mishna</Link> }
       </div>
     );
 
