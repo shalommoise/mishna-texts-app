@@ -15,7 +15,7 @@
   margin-right: 5cm;
 }
 h2 {
-  /* text-decoration: underline; */
+  text-decoration: underline;
   font-size: large;
 }
 h1 {
@@ -29,10 +29,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
-.JFTlogo {
-  /* padding-right: 8cm; */
-  /* margin-right: 5cm; */
-}
+
 .formPage {
   display: grid;
 }
