@@ -22,14 +22,14 @@ changeText =(text)=>{
   arr.pop();
   const newArr = [] ;
   arr.forEach((element, i) => {
-  if(element.includes(".")) {
-    const newEl =element.split(".")[0];
-    newArr.push(newEl)
-    newArr.push(". "); 
+  // if(element.includes(".")) {
+  //   const newEl =element.split(".")[0];
+  //   newArr.push(newEl)
+  //   newArr.push(". "); 
    
-  } else {
-    newArr.push(" "+ element + " ")
-  }
+  // } else {
+    newArr.push(" "+ element )
+  // }
   });
   const lastWord =  newArr.pop();
   const formatWord = lastWord.split(":")[0];
